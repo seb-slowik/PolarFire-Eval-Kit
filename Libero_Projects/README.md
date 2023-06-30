@@ -1,18 +1,18 @@
 # PolarFire Evaluation Kit Mi-V Sample FPGA Designs
-This folder contains Tcl scripts that build Libero SoC v2022.2 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All Configuration (CFG) design cores boot from memory at 0x8000_0000.
+This folder contains Tcl scripts that build Libero SoC v2023.1 design projects for the PolarFire Evaluation Kit. These scripts are executed in Libero SoC to generate the sample designs. All Configuration (CFG) design cores boot from memory at 0x8000_0000.
 
 > MI-V Extended Subsystem Design Guide Configurations:
-> * For **Design Guide Configuration - DGC1: SPI Write & Boot** refer to this [DGC1 README](import/components/IMC_DGC1/README.md)
-> * For **Design Guide Configuration - DGC3: PF uPROM Boot** refer to this [DGC3 README](import/components/IMC_DGC3/README.md)
-> * For **Design Guide Configuration - DGC4: Basic Peripherals** refer to this [DGC4 README](import/components/IMC_DGC4/README.md)
+> * For **Design Guide Configuration - DGC1: SPI Write & Boot** refer to this [DGC1 README](docs/design_dgc1/README.md)
+> * For **Design Guide Configuration - DGC3: PF uPROM Boot** refer to this [DGC3 README](docs/design_dgc3/README.md)
+> * For **Design Guide Configuration - DGC4: Basic Peripherals** refer to this [DGC4 README](docs/design_dgc4/README.md)
 
 
 #### PF_Eval_Kit_MIV_RV32_BaseDesign
 
 | Config  | Description|
 | :------:|:----------------------------------------|
-| CFG1    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Internal IRQs: 1</li><li>TCM: enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li></ul>|
-| CFG2    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IM</li><li>Multiplier: Fabric</li><li>Interfaces: AXI4 Master (mirrored), APB3 Master</li><li>Internal IRQs: 1</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li></ul>|
+| CFG1    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Internal IRQs: 1</li><li>TCM: enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li><li>An example program is stored in the LSRAM to boot out the box</ul>|
+| CFG2    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IM</li><li>Multiplier: Fabric</li><li>Interfaces: AXI4 Master (mirrored), APB3 Master</li><li>Internal IRQs: 1</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li><li>An example program is stored in the LSRAM to boot out the box</ul>|
 | CFG3    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: I</li><li>Multiplier: none</li><li>Interfaces: APB3 Master</li><li>Internal IRQs: 1</li><li>TCM: enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: Enabled</li></ul>|
 | CFG4    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: Fabric</li><li>Interfaces: AHBLite Master, APB3 Master, AXI4 Master</li><li>Internal IRQs: 0</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>This design is supported on PolarFire production silicon. The design configuration is specifically for use with the User Crypto processor example firmware and the CoreSysServices_PF example firmware. The memory map of the design is printed in tcl console once the design is created.|
 
@@ -21,15 +21,15 @@ This folder contains Tcl scripts that build Libero SoC v2022.2 design projects f
 
 | Config  | Description |
 | :------:|:------------|
-| CFG1    |This design uses the MIV_RV32IMA_L1_AHB core with an **AHB** interface for memory and peripherals|
-| CFG2    |This design uses the MIV_RV32IMA_L1_AXI core with an **AXI3** interface for memory and peripherals|
+| CFG1    |This design uses the MIV_RV32IMA_L1_AHB core with an **AHB** interface for memory and peripherals. <li>An example program is stored in the LSRAM to boot out the box|
+| CFG2    |This design uses the MIV_RV32IMA_L1_AXI core with an **AXI3** interface for memory and peripherals. <li>An example program is stored in the LSRAM to boot out the box|
 
 
 #### PF_Eval_Kit_MIV_RV32IMAF_BaseDesign
 
 | Config  |Description |
 | :------:|:-----------|
-| CFG1    |  This design uses the MIV_RV32IMAF_L1_AHB core with an **AHB** interface for memory and peripherals|
+| CFG1    |  This design uses the MIV_RV32IMAF_L1_AHB core with an **AHB** interface for memory and peripherals. <li>An example program is stored in the LSRAM to boot out the box|
 
 
 

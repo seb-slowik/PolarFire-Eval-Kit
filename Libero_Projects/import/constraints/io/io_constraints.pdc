@@ -22,15 +22,24 @@
 # User Locked I/O settings
 # 
 
+# -- Clock (50MHz) -- #
+# HSIO63PB6/CLKIN_S_12/CCC_SE_CLKIN_S_12/CCC_SE_PLL0_OUT0
 
-# -- User PushButtons I/O -- #
+set_io -port_name {REF_CLK}  \
+    -pin_name E25               \
+    -fixed true                 \
+    -DIRECTION INPUT
 
-set_io -port_name {SW_7}  \
+# -- User I/O -- #
+
+# Tied to SW7 on the board
+set_io -port_name {SW_1}  \
     -pin_name B27               \
     -fixed true                 \
     -DIRECTION INPUT
 
-set_io -port_name {SW_8}  \
+# Tied to SW8 on the board
+set_io -port_name {SW_2}  \
     -pin_name C21               \
     -fixed true                 \
     -DIRECTION INPUT
@@ -43,22 +52,26 @@ set_io -port_name USER_RST  \
 
 # -- LEDs I/O --#
 
-set_io -port_name {LED_4}  \
+# Tied to LED_4 on the board
+set_io -port_name {LED_1}  \
     -pin_name F22                \
     -fixed true                  \
     -DIRECTION OUTPUT
 
-set_io -port_name {LED_5}  \
+# Tied to LED_5 on the board
+set_io -port_name {LED_2}  \
     -pin_name B26                \
     -fixed true                  \
     -DIRECTION OUTPUT
 
-set_io -port_name {LED_6}  \
+# Tied to LED_6 on the board
+set_io -port_name {LED_3}  \
     -pin_name C26                \
     -fixed true                  \
     -DIRECTION OUTPUT
 
-set_io -port_name {LED_7}  \
+# Tied to LED_7 on the board
+set_io -port_name {LED_4}  \
     -pin_name D25                \
     -fixed true                  \
     -DIRECTION OUTPUT

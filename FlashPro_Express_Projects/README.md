@@ -1,6 +1,6 @@
 # PolarFire Evaluation Kit FPGA Programming Files
 
-This folder contains FlashPro Express v2022.2 projects for the PolarFire Evaluation Kit Mi-V sample designs.
+This folder contains FlashPro Express v2023.1 projects for the PolarFire Evaluation Kit Mi-V sample designs.
 
 ## FlashPro Express
 The programming files contained under this folder were exported from the designs in the Libero_Projects folder in this repository. Select the desired programming file (.job) and program your device using FlashPro Express.
@@ -22,9 +22,9 @@ The programming files contained under this folder were exported from the designs
 ## Design Features
 
 > MI-V Extended Subsystem Design Guide Configurations:
-> * For **DGC1: SPI Write & Boot** design features, refer to [DGC1 README](../Libero_Projects/import/components/IMC_DGC1/README.md)
-> * For **DGC3: PF uPROM Boot** design features, refer to [DGC3 README](../Libero_Projects/import/components/IMC_DGC3/README.md)
-> * For **DGC4: Basic Peripherals** design features, refer to [DGC4 README](../Libero_Projects/import/components/IMC_DGC4/README.md)
+> * For **DGC1: SPI Write & Boot** design features, refer to [DGC1 README](../docs/design_dgc1/README.md)
+> * For **DGC3: PF uPROM Boot** design features, refer to [DGC3 README](../docs/design_dgc3/README.md)
+> * For **DGC4: Basic Peripherals** design features, refer to [DGC4 README](../docs/design_dgc4/README.md)
 
 The following applies only to non MIV_ESS Design Guide: Design Guide Configurations (DGC1, DGC3 or DGC4)
 
