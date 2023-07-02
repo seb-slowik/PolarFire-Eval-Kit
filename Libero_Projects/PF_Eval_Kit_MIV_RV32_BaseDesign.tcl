@@ -34,7 +34,7 @@ print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlo
 
 # Configure Libero project files and directories
 append projectName $hwPlatform _ $dieType _ $cpuRef _ $config _ $sdName
-append projectFolderName [expr { ($dieType eq "PS" ) ? "${softCpu}_${config}_BD" : "${softCpu}_${config}_BD_ES"}]
+append projectFolderName [expr { ($dieType eq "PS" ) ? "${cpuRef}_${config}_BD" : "${cpuRef}_${config}_BD_ES"}]
 set projectDir $scriptDir/$projectFolderName
 puts "Info: projectName: $projectName"
 puts "Info: projectFolderName: $projectFolderName"
