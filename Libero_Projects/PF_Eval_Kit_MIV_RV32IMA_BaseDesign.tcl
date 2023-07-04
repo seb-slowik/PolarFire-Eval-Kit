@@ -33,7 +33,7 @@ get_die_configuration $hwPlatform $dieType
 print_message "Runnig script: $scriptPath \nDesign Arguments: $config $designFlow $dieType \nDesign Build Script: $sdBuildScript"
 
 # Configure Libero project files and directories
-append projectName $hwPlatform _ $dieType _ $cpuRef _ $config _ $sdName
+set projectName "${hwPlatform}[expr {$dieType eq "ES" ? "_${dieType}" : ""}]_${cpuRef}_${config}_${sdName}" ; # projectName only reflects dieType if dieType is "ES"
 append projectFolderName [expr { ($dieType eq "PS" ) ? "${cpuRef}_${config}_BD" : "${cpuRef}_${config}_BD_ES"}]
 set projectDir $scriptDir/$projectFolderName
 puts "Info: projectName: $projectName"
