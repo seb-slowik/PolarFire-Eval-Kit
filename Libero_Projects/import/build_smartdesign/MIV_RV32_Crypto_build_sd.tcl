@@ -293,16 +293,16 @@ sd_connect_pins -sd_name ${sdName} -pin_names {"DDR3_Subsys_0:DQS" "DQS" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"DDR3_Subsys_0:DQS_N" "DQS_N" }
 
 # Add bus interface net connections
-sd_connect_pins -sd_name ${sdName} -pin_names {"AHBL_bus_0:AHBmmaster0" "MIV_RV32_C0_0:AHBL_MSTR" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"AHBL_bus_0:AHBmmaster0" "MIV_RV32_C0_0:AHBL_INITIATOR" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"AHBL_bus_0:AHBmmaster1" "ahbm_to_ahbs_bridge_0:AHBL_Master" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"AHBL_bus_0:AHBmslave1" "crypto_buffer_0:AHBSlaveInterface" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"AHBL_bus_0:AHBmslave2" "ahbs_to_ahbm_bridge_0:AHBL_Slave" }
-sd_connect_pins -sd_name ${sdName} -pin_names {"APB3_bus_0:APB3mmaster" "MIV_RV32_C0_0:APB_MSTR" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"APB3_bus_0:APB3mmaster" "MIV_RV32_C0_0:APB_INITIATOR" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"APB3_bus_0:APBmslave0" "UART_IF_0:APB_bif" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"APB3_bus_0:APBmslave1" "CoreGPIO_OUT_0:APB_bif" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"APB3_bus_0:APBmslave2" "SPI_Controller_0:APB_bif" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"APB3_bus_0:APBmslave3" "SystemServices_0:APBSlave" }
-sd_connect_pins -sd_name ${sdName} -pin_names {"AXI_Interconnect_0:AXI4mmaster0" "MIV_RV32_C0_0:AXI4_MSTR" }
+sd_connect_pins -sd_name ${sdName} -pin_names {"AXI_Interconnect_0:AXI4mmaster0" "MIV_RV32_C0_0:AXI4_INITIATOR" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"AXI_Interconnect_0:AXI4mslave0" "LSRAM_0:AXI4_Slave" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"AXI_Interconnect_0:AXI4mslave1" "DDR3_Subsys_0:AXI4slave0" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"ahbm_to_ahbs_bridge_0:AHBL_MMaster" "crypto_processor_0:AHB_MASTER" }
