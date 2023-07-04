@@ -95,10 +95,10 @@ pre_configure_place_and_route
 # Run 'Synthesize' from the design flow
 if {"$designFlow" == "SYNTHESIZE"} then {
 	print_message "Starting Synthesis..."
-	if {"$config" == "CFG3"} {
+	if {$softCpu eq "MIV_RV32IMA_L1_AXI"} {
 		configure_tool -name {SYNTHESIZE} -params {SYNPLIFY_OPTIONS:set_option -looplimit 4000} 
 		print_alternative_message "The loop limit had to be increased to 4000 for this MIV_RV32IMA_L1_AXI design."
-		}
+	}
     run_tool -name {SYNTHESIZE}
     save_project
 	print_message "Synthesis Complete."
